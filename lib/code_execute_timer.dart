@@ -1,18 +1,15 @@
 library code_execute_timer;
 
-import 'package:flutter/foundation.dart';
-
 class CodeExecuteTimer {
   Stopwatch stopwatch = Stopwatch();
 
-  start() {
+  CodeExecuteTimer start() {
     stopwatch.start();
+    return this;
   }
 
   stop() {
     stopwatch.stop();
-    if (kDebugMode) {
-      print('Execution time: ${stopwatch.elapsedMilliseconds} ms');
-    }
+    print('Execution time: ${stopwatch.elapsedMilliseconds} ms');
   }
 }
